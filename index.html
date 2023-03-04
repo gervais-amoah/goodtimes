@@ -105,7 +105,7 @@
         </nav>
       </header>
       <div class="intro-date">
-        <h1 class="heading tc">March 3, 2018</h1>
+        <h1 class="heading tc">March 4, 2023</h1>
       </div>
       <div class="tc">
         <a class="button" href="#register">I’m ready for a good time</a>
@@ -113,9 +113,9 @@
     </div>
 
     <div class="container">
+      <!-- About -->
       <div class="pt5-ns mb4 mb5-ns" id="about">
-        <!-- here we use our orange heading variation -->
-        <h2 class="heading heading__orange">About</h2>
+        <h2 class="heading heading-orange">About</h2>
         <div class="sm-col-8 md-col-7 f4">
           Good Times is an design and front-end development conference held in
           the heart of Melbourne, Australia. The goal of the conference is to
@@ -124,6 +124,7 @@
         </div>
       </div>
 
+      <!-- About images -->
       <div class="flex flex-wrap justify-between mb5-ns">
         <div class="col-12 sm-col-6 md-col-5 pt5-m pt5-l mb4 mb0-ns">
           <img src="./assets/images/about-1.jpg" class="image fade db" />
@@ -133,6 +134,7 @@
         </div>
       </div>
 
+      <!-- About image -->
       <div class="flex flex-wrap justify-between mb4 mb5-ns">
         <div
           class="col-12 sm-col-5 md-col-4 sm-indent-1 md-indent-2 pt5-ns mb4 mb0-ns"
@@ -146,6 +148,168 @@
           <p class="cite">Ellen Lupton</p>
         </div>
       </div>
+
+      <!-- Speakers -->
+      <div class="speakers mb4 mb5-ns" id="speakers">
+        <h2 class="heading heading-orange">Speakers</h2>
+        <div class="flex flex-wrap">
+          <div class="speaker col-6 sm-col-3 mb4">
+            <img src="./assets/images/marianna.jpg" class="speaker-image" />
+            <p class="speaker-name pr2">Marianna Manning</p>
+            <p class="speaker-title pr2">UX Designer, Lite.ly</p>
+          </div>
+          <div class="speaker col-6 sm-col-3 mb4">
+            <img src="./assets/images/jose.jpg" class="speaker-image" />
+            <p class="speaker-name pr2">Jose Vega</p>
+            <p class="speaker-title pr2">Creative Director, Open</p>
+          </div>
+          <div class="speaker col-6 sm-col-3">
+            <img src="./assets/images/hattie.jpg" class="speaker-image" />
+            <p class="speaker-name pr2">Hattie Richardson</p>
+            <p class="speaker-title pr2">Project Manager, IBN</p>
+          </div>
+          <div class="speaker col-6 sm-col-3">
+            <img src="./assets/images/nat.jpg" class="speaker-image" />
+            <p class="speaker-name pr2">Nat Watts</p>
+            <p class="speaker-title pr2">Founder + Developer, Uppi</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Schedule -->
+      <div class="mb4 mb5-ns" id="schedule">
+        <h2 class="heading heading-orange">Schedule</h2>
+
+        <!-- a combination of flex and overflow-auto gives us a scrollbar 
+        when the element runs out of space -->
+        <div class="schedule-container flex overflow-auto">
+          <div class="schedule-day">Saturday Mar 4</div>
+          <div class="schedule flex">
+            <div class="w-20 ph3">
+              <div class="schedule-time">10:30</div>
+              <div class="schedule-event">Coffee + Brunch</div>
+            </div>
+            <div class="w-20 ph3">
+              <div class="schedule-time">12:30</div>
+              <div class="schedule-event">Leadership & Design Systems</div>
+            </div>
+            <div class="w-20 ph3">
+              <div class="schedule-time">14:30</div>
+              <div class="schedule-event">Design for Future Worlds</div>
+            </div>
+            <div class="w-20 ph3">
+              <div class="schedule-time">15:30</div>
+              <div class="schedule-event">Pixels and Psychology</div>
+            </div>
+            <div class="w-20 ph3">
+              <div class="schedule-time">19:45</div>
+              <div class="schedule-event">VR/AR in 2030 and Beyond</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Register -->
+      <div id="register">
+        <h2 class="heading heading-orange">Register</h2>
+
+        <div class="flex flex-wrap mb4 mb5-ns">
+          <div class="col-12 sm-col-6 cover register-image"></div>
+          <div class="col-12 sm-col-6 register relative bg-orange orange">
+            <div
+              class="front location flex flex-wrap pa4 items-center bg-orange relative z-2 col-12"
+            >
+              <p class="mt0 mb4 col-12">
+                3 March, 2018 <br />
+                Melbourne, Australia
+              </p>
+              <p class="mt0 mb4 col-12">
+                Fitzroy Social <br />
+                222 Brunswick St, Fitzroy VIC 3065
+              </p>
+              <button
+                class="button button-small button-outline register-button"
+              >
+                Register
+              </button>
+            </div>
+            <form
+              action="https://api.superhi.com/api/test/orders"
+              class="back form z-1 pa4 col-12"
+              id="payment-form"
+            >
+              <div class="spinner"></div>
+              <h3 class="mt0 mb2 form-title">Your details</h3>
+              <div class="form-fields">
+                <!-- the required attribute makes the form unable to submit unless the fields are filled -->
+                <input
+                  name="name"
+                  class="mb2 db"
+                  placeholder="Name"
+                  id="name"
+                  required
+                />
+                <input
+                  name="email"
+                  class="mb2 db"
+                  placeholder="Email"
+                  id="email"
+                  required
+                  type="email"
+                />
+                <div id="card-element" class="mb2"></div>
+                <div id="card-errors" role="alert"></div>
+                <div class="pt2">
+                  <button type="button" class="button button-small">
+                    Buy ticket for $100 AUD
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Images -->
+      <div class="flex flex-wrap justify-between pt5-ns mb4 mb5-ns">
+        <div class="col-12 sm-col-5 sm-indent-1 mb4 mb0-ns">
+          <img src="./assets/images/about-4.jpg" class="image fade db" />
+        </div>
+        <div class="col-12 sm-col-5">
+          <img src="./assets/images/about-5.jpg" class="image fade db" />
+        </div>
+      </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer pv3 pv5-ns">
+      <div class="container flex justify-between items-center">
+        <a href="#top" class="footer-link contain bg-center bg-no-repeat"></a>
+        <nav class="footer-nav flex items-center">
+          <a
+            href="https://twitter.com/gevpein"
+            target="_blank"
+            class="no-underline db"
+          >
+            <img src="./assets/images/twitter.svg" alt="Twitter" class="db" />
+          </a>
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            class="no-underline ml3 db"
+          >
+            <img src="./assets/images/facebook.svg" alt="Facebook" class="db" />
+          </a>
+          <!-- <span style="color: var(--white); padding-left: 1rem"
+            >Gervais Amoah</span> -->
+        </nav>
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="./assets/js/tilt.js"></script>
+    <script src="./assets/js/in-view.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <!-- <script src="./assets/js/anime.min.js"></script> -->
   </body>
 </html>

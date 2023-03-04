@@ -1,13 +1,21 @@
 :root {
   /* give the variable a name and value (needs two -- in front) */
   --orange: #ff3c15;
+  --orange-light: #ffe6dd;
   --white: #fff;
+  --gray: #979797;
   --dark: #414141;
+  --input-color: #32325d;
+  --input-placeholder-color: #aab7c4;
+
+  --regular: 'HK-Grotesk-Regular', sans-serif;
+  --medium: 'HK-Grotesk-Medium', sans-serif;
+  --bold: 'HK-Grotesk-Bold', sans-serif;
 }
 
 
 body {
-  font-family: 'HK-Grotesk-Medium', sans-serif;
+  font-family: var(--medium);
   font-size: 18px;
   line-height: 1.5;
   color: var(--dark);
@@ -27,12 +35,12 @@ a {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 3px;
   -webkit-text-stroke-color: var(--white);
-  font-family: 'HK-Grotesk-Bold', sans-serif;
+  font-family: var(--bold);
 
   font-size: 110px;
   line-height: 1;
 
-  &__orange {
+  &-orange {
     font-size: 120px;
   -webkit-text-stroke-color: var(--orange);
   margin-bottom: 3rem;
@@ -48,13 +56,120 @@ a {
   letter-spacing: 0.05em;
   border: none;
   padding: 24px 72px;
-  font-family: 'HK-Grotesk-Bold', sans-serif;
+  font-family: var(--bold);
+
+  &-small {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+
+  &-outline {
+    background-color: transparent;
+    border: solid 2px var(--orange);
+    color: var(--orange);
+  }
 }
 
 .container {
   max-width: 1080px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+blockquote {
+  color: var(--orange);
+  font-size: 36px;
+}
+
+.cite {
+  display: inline-block;
+  color: var(--orange);
+  line-height: 1;
+  padding: 24px 18px;
+  border-radius: 100%;
+  border: solid 3px var(--orange);
+  text-transform: uppercase;
+  margin-top: 12px;
+}
+
+// SPEAKERS
+.speaker-image {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.speaker-name,
+.speaker-title {
+  margin: 0;
+  line-height: 1.33;
+}
+
+.speaker-title {
+  color: var(--gray);
+  font-family: var(--regular);
+}
+
+// SCHEDULE
+.schedule-container {
+  border: solid 3px var(--orange);
+	/* this gives us natural scrolling behaviour on touch screens */
+  -webkit-overflow-scrolling: touch;
+}
+
+.schedule-container::-webkit-scrollbar {
+  width: 12px;
+  height: 14px;
+  background-color: transparent;
+}
+
+.schedule-container::-webkit-scrollbar-thumb {
+  background-color: var(--orange);
+  border: solid 2px var(--white);
+}
+
+.schedule {
+  padding: 48px 24px;
+}
+
+.schedule-time {
+  color: var(--orange);
+  font-size: 36px;
+  font-family: var(--bold);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.schedule-day {
+	/* languages like japanese sometimes have a vertical writing style */
+  writing-mode: vertical-rl;
+	/* we can change the text orientation to sideways */
+  text-orientation: sideways;
+	/* then we rotate the text to flip it over */
+  transform: rotate(180deg);
+  padding: 24px;
+  color: var(--white);
+  line-height: 1;
+  background-color: var(--orange);
+  text-align: center;
+}
+
+// Footer
+.footer {
+  background-color: #222;
+}
+
+.footer-link {
+  width: 131px;
+  height: 40px;
+  background-image: url('../images/logo.svg');
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.visible {
+  opacity: 1;
 }
