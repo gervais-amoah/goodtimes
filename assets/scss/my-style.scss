@@ -1,0 +1,60 @@
+:root {
+  /* give the variable a name and value (needs two -- in front) */
+  --orange: #ff3c15;
+  --white: #fff;
+  --dark: #414141;
+}
+
+
+body {
+  font-family: 'HK-Grotesk-Medium', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--dark);
+  background-image: url('../images/background.jpg');
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark);
+}
+
+.heading {
+  color: var(--white);
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 3px;
+  -webkit-text-stroke-color: var(--white);
+  font-family: 'HK-Grotesk-Bold', sans-serif;
+
+  font-size: 110px;
+  line-height: 1;
+
+  &__orange {
+    font-size: 120px;
+  -webkit-text-stroke-color: var(--orange);
+  margin-bottom: 3rem;
+  color: var(--orange);
+  }
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--orange);
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: none;
+  padding: 24px 72px;
+  font-family: 'HK-Grotesk-Bold', sans-serif;
+}
+
+.container {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
