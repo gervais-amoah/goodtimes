@@ -13,6 +13,9 @@
   --bold: 'HK-Grotesk-Bold', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: var(--medium);
@@ -42,9 +45,9 @@ a {
 
   &-orange {
     font-size: 120px;
-  -webkit-text-stroke-color: var(--orange);
-  margin-bottom: 3rem;
-  color: var(--orange);
+    -webkit-text-stroke-color: var(--orange);
+    margin-bottom: 3rem;
+    color: var(--orange);
   }
 }
 
@@ -113,7 +116,7 @@ blockquote {
 // SCHEDULE
 .schedule-container {
   border: solid 3px var(--orange);
-	/* this gives us natural scrolling behaviour on touch screens */
+  /* this gives us natural scrolling behaviour on touch screens */
   -webkit-overflow-scrolling: touch;
 }
 
@@ -141,11 +144,11 @@ blockquote {
 }
 
 .schedule-day {
-	/* languages like japanese sometimes have a vertical writing style */
+  /* languages like japanese sometimes have a vertical writing style */
   writing-mode: vertical-rl;
-	/* we can change the text orientation to sideways */
+  /* we can change the text orientation to sideways */
   text-orientation: sideways;
-	/* then we rotate the text to flip it over */
+  /* then we rotate the text to flip it over */
   transform: rotate(180deg);
   padding: 24px;
   color: var(--white);
@@ -172,4 +175,35 @@ blockquote {
 
 .visible {
   opacity: 1;
+}
+
+@media (max-width: 800px) {
+  body {
+    font-size: 16px;
+    background-size: auto 120vh;
+  }
+  .heading {
+    font-size: 72px;
+    -webkit-text-stroke-width: 2px;
+  }
+  .button {
+    padding: 18px 32px;
+    font-size: 16px;
+  }
+  .heading-orange {
+    margin-bottom: 24px;
+  }
+  blockquote {
+    line-height: 1.2;
+  }
+  .schedule-day {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .heading {
+    font-size: 48px;
+    -webkit-text-stroke-width: 1px;
+  }
 }

@@ -4,6 +4,44 @@ const header = document.querySelector('.header');
 const desktopHeader = document.querySelector('.header-desktop');
 desktopHeader.innerHTML = header.innerHTML;
 
+function setCurrentDate() {
+  // Create a new Date instance
+  const currentDate = new Date();
+  const elts = document.querySelectorAll('.today');
+
+  // Define months array
+  const months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ];
+
+  // Get the day, month, and year
+  const day = currentDate.getDate();
+  const monthName = months[currentDate.getMonth()];
+  const year = currentDate.getFullYear();
+
+  // Format the date string
+  const formattedDate = `${day} ${monthName}, ${year}`;
+
+  elts.forEach(item => {
+    item.textContent = formattedDate;
+  });
+
+  console.log(formattedDate); // Output: "22 September, 2021"
+}
+
+setCurrentDate();
+
 // 1. when the .header enters the viewport, hide the desktop header (removing the visible class)
 // 2. when the header leaves, show it (by adding the visible class)
 inView('.header')
