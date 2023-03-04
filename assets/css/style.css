@@ -8308,6 +8308,7 @@ input {
   --white: #fff;
   --gray: #979797;
   --dark: #414141;
+  --footer-bg: #222;
   --input-color: #32325d;
   --input-placeholder-color: #aab7c4;
   --regular: "HK-Grotesk-Regular", sans-serif;
@@ -8397,6 +8398,11 @@ blockquote {
 .speaker-image {
   display: block;
   margin-bottom: 12px;
+  -webkit-transition: scale 0.2s ease;
+  transition: scale 0.2s ease;
+}
+.speaker-image:hover {
+  scale: 1.1;
 }
 
 .speaker-name,
@@ -8457,7 +8463,7 @@ blockquote {
 }
 
 .footer {
-  background-color: #222;
+  background-color: var(--footer-bg);
 }
 
 .footer-link {
